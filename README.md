@@ -1,11 +1,7 @@
 ## Read Me
 
-This contains three different applications
+use 'npm run dev' for the client
 
-- electron-client -> Uses Electron and React
-- express-server -> Uses Express and MongoDB/Mongoose
-- flask-app -> Uses Flask and interfaces with the Raspberry Pi's GPIO
+use 'npm server.js' for the server
 
-The Express and Flask servers run on the Raspberry Pi
-
-The Electron Client runs on the Client machine
+python dependencies can be installed with 'pip -r requirements.txt'
