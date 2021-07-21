@@ -1,0 +1,121 @@
+#App {
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 100px;
+  -webkit-perspective: 10em;
+          perspective: 10em;
+  -webkit-perspective-origin: 50% calc( 50% - 2em);
+          perspective-origin: 50% calc( 50% - 2em);
+  overflow: hidden;
+}
+
+#Scene {
+  position: relative;
+}
+
+#Floor {
+  width: 10em;
+  height: 10em;
+  background-image: radial-gradient(#0000, #000 75%), url("../img/Floor.png");
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+          transform: translate(-50%, -50%) rotateX(90deg);
+  top: .3em;
+}
+
+#Text {
+  width: 100vw;
+  position: absolute;
+  left: -50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateZ(calc( 1.2em + 5px));
+          transform: translateZ(calc( 1.2em + 5px));
+}
+
+p {
+  width: 10em;
+  height: 1.6em;
+  padding: 10px;
+  background-color: #fff3;
+  color: red;
+  border: 2px solid grey;
+  position: absolute;
+  top: -1em;
+  text-align: center;
+  font-size: .5em;
+  text-shadow: 0 0 3px #000;
+  -webkit-box-shadow: 0 0 0.05em #000 inset, 0 0 1px 0px #fff;
+          box-shadow: 0 0 0.05em #000 inset, 0 0 1px 0px #fff;
+}
+
+.Side {
+  height: 1.6em;
+  background-color: #fff3;
+  border: 2px solid grey;
+  position: absolute;
+  top: -1em;
+  left: -5em;
+  font-size: .5em;
+  -webkit-box-shadow: 0 0 0.05em #000 inset, 0 0 1px 0px #fff;
+          box-shadow: 0 0 0.05em #000 inset, 0 0 1px 0px #fff;
+}
+
+#BackSide {
+  width: 10em;
+  -webkit-transform: translateZ(-2.5em) rotateY(180deg);
+          transform: translateZ(-2.5em) rotateY(180deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#RightSide, #LeftSide {
+  width: 5em;
+}
+
+#RightSide {
+  left: 2.5em;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+
+#LeftSide {
+  -webkit-transform: rotateY(-90deg) translateZ(2.5em);
+          transform: rotateY(-90deg) translateZ(2.5em);
+}
+
+#Bottom {
+  width: 10em;
+  height: 5em;
+  border: 2px solid grey;
+  -webkit-transform: rotateX(-90deg) translateZ(-46px);
+          transform: rotateX(-90deg) translateZ(-46px);
+  -webkit-box-shadow: 0 0 0.2em #000 inset, 0 0 0.5em #000, 0 0 1px 0px #fff;
+          box-shadow: 0 0 0.2em #000 inset, 0 0 0.5em #000, 0 0 1px 0px #fff;
+}
+
+#Top {
+  width: 10em;
+  height: 5em;
+  -webkit-transform: rotateX(90deg) translateZ(2.5em);
+          transform: rotateX(90deg) translateZ(2.5em);
+}
