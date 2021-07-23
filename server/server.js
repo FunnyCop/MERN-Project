@@ -6,7 +6,7 @@ app.use( express.json() )
 app.use( express.urlencoded( { extended: true } ) )
 
 app.post( "/rotation", ( req, res ) => {
-    const { rotation } = req.body
+    const { rotation } = req.body // Comes through as "0deg"
     io.emit( "message", rotation )
     res.json( "success" )
 } )
@@ -21,5 +21,7 @@ let connected = true
 
 io.on( "connection", socket => {
     console.log( "user connected" )
+
+    // Let one client connect then disconnect all other sockets
     connected ? connected = false : socket.disconnect()
 } )

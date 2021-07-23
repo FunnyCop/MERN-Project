@@ -1,7 +1,9 @@
-module.exports = io => {
-    const routes = {}
+// This is not used
 
-    routes.rotation = ( req, res ) => { io.emit( "NewRotation" ) }
+// module.exports = io => {
+//     const routes = {}
 
-    return routes
-}
+//     routes.rotation = ( req, res ) => { io.emit( "NewRotation" ) }
+
+//     return routes
+// }

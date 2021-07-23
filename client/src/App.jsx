@@ -5,16 +5,21 @@ import "./static/css/App.css"
 
 const App = () => {
   const [ socket ] = useState( io( "http://192.168.1.2:3001" ) )
-  const [ rotation, setRotation ] = useState( "0deg" )
+  const [ rotation, setRotation ] = useState( "0deg" ) // For the "Scene" element
 
   socket.on( "message", deg => {
-    setRotation( deg )
+    setRotation( deg ) // Comes through as "0deg"
     console.log( deg )
   } )
 
-  const styles =  { transform: `rotateY( ${ rotation } )`, WebkitTransform: `rotateY( ${ rotation } )` }
+  // This is what rotates the whole scene
+  const styles =  {
+    transform: `rotateY( ${ rotation } )`,
+    WebkitTransform: `rotateY( ${ rotation } )`
+  }
 
   return (
+    // #root -> #App -> #Scene
     <div id = "App">
       <div id = "Scene" style = { styles }>
         <div id = "Text">
