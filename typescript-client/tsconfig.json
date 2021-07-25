@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES3",
+    "target": "esnext",
     "lib": [
       "dom",
       "dom.iterable",
