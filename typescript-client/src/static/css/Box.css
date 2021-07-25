@@ -1,0 +1,58 @@
+.Side {
+  height: 1.6em;
+  background-color: #fff3;
+  border: 2px solid grey;
+  position: absolute;
+  top: -1em;
+  left: -5em;
+  font-size: .5em;
+  -webkit-box-shadow: 0 0 0.05em #000 inset, 0 0 1px 0px #fff;
+          box-shadow: 0 0 0.05em #000 inset, 0 0 1px 0px #fff;
+}
+
+#BackSide {
+  width: 10em;
+  -webkit-transform: translateZ(-2.5em) rotateY(180deg);
+          transform: translateZ(-2.5em) rotateY(180deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#RightSide, #LeftSide {
+  width: 5em;
+}
+
+#RightSide {
+  left: 2.5em;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+
+#LeftSide {
+  -webkit-transform: rotateY(-90deg) translateZ(2.5em);
+          transform: rotateY(-90deg) translateZ(2.5em);
+}
+
+#Bottom {
+  width: 10em;
+  height: 5em;
+  border: 2px solid grey;
+  -webkit-transform: rotateX(-90deg) translateZ(-46px);
+          transform: rotateX(-90deg) translateZ(-46px);
+  -webkit-box-shadow: 0 0 0.2em #000 inset, 0 0 0.5em #000, 0 0 1px 0px #fff;
+          box-shadow: 0 0 0.2em #000 inset, 0 0 0.5em #000, 0 0 1px 0px #fff;
+}
+
+#Top {
+  width: 10em;
+  height: 5em;
+  -webkit-transform: rotateX(90deg) translateZ(2.5em);
+          transform: rotateX(90deg) translateZ(2.5em);
+}

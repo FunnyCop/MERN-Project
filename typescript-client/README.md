@@ -1,0 +1,1 @@
+migration to typescript, really just a test to see how I can get everything to work with typescript on top
